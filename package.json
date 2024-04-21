@@ -2,7 +2,7 @@
   "name": "rimworld-translate-about-xml-generator",
   "displayName": "RimWorld Translate About.xml Generator",
   "description": "Generate RimWorld's About.xml for the translate mod from the original mod's About.xml.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.88.0"
   },
