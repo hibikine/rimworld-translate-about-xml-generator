@@ -2,7 +2,7 @@
   "name": "rimworld-translate-about-xml-generator",
   "displayName": "RimWorld Translate About.xml Generator",
   "description": "Generate RimWorld's About.xml for the translate mod from the original mod's About.xml.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -28,6 +28,16 @@
           "type": "string",
           "default": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods",
           "description": "The directory where the mod is located. This is used to find the original About.xml file."
+        },
+        "rimworld-translate-about-xml-generator.authorName": {
+          "type": "string",
+          "default": "Your name here",
+          "description": "The author's name of the translate mod."
+        },
+        "rimworld-translate-about-xml-generator.authorId": {
+          "type": "string",
+          "default": "translate.mod",
+          "description": "The author's ID of the translate mod."
         }
       }
     },

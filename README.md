@@ -20,4 +20,6 @@ RimWorldの翻訳用About.xmlを生成します
 
 steamWorkshopDirectory: Workshopのディレクトリを指定します（デフォルト：C:/Program Files (x86)/Steam/steamapps/workshop/content/294100）
 modDirectory: Modのディレクトリを指定します（デフォルト：C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods）
+authorName: 翻訳制作者の名前を入力します（例：Hibikine Kage）
+authorId: 翻訳制作者のIDを入力します（例：works.hikage）
 

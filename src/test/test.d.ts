@@ -5,6 +5,8 @@ declare module 'process' {
         TZ?: string;
         MOD_DIRECTORY?: string;
         STEAM_WORKSHOP_DIRECTORY?: string;
+        AUTHOR_NAME?: string;
+        AUTHOR_ID?: string;
       }
     }
   }

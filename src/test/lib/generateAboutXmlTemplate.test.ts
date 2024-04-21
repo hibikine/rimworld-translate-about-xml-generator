@@ -1,8 +1,15 @@
 import * as assert from 'assert';
+import * as vscode from 'vscode';
 import { generateAboutXmlTemplate } from '../../lib/generateAboutXmlTemplate';
 
 suite('generateAboutXmlTemplate', () => {
-  test('generateAboutXmlTemplate', () => {
+  test('generateAboutXmlTemplate', async () => {
+    await vscode.workspace
+      .getConfiguration('rimworld-translate-about-xml-generator')
+      .update('authorName', 'Hibikine Kage', vscode.ConfigurationTarget.Global);
+    await vscode.workspace
+      .getConfiguration('rimworld-translate-about-xml-generator')
+      .update('authorId', 'works.hikage', vscode.ConfigurationTarget.Global);
     const result = generateAboutXmlTemplate({
       name: 'Test Mod',
       packageId: 'testmod.test',
