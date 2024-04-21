@@ -13,6 +13,7 @@
   "license": "MIT",
   "activationEvents": [],
   "main": "./out/extension.js",
+  "publisher": "HikageWorks",
   "contributes": {
     "configuration": {
       "type": "object",
