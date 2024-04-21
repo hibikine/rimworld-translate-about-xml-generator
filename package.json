@@ -2,13 +2,15 @@
   "name": "rimworld-translate-about-xml-generator",
   "displayName": "RimWorld Translate About.xml Generator",
   "description": "Generate RimWorld's About.xml for the translate mod from the original mod's About.xml.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.88.0"
   },
   "categories": [
     "Other"
   ],
+  "repository": "https://github.com/hibikine/rimworld-translate-about-xml-generator",
+  "license": "MIT",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -45,7 +47,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "prepare": "husky",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
@@ -54,6 +58,7 @@
     "@types/xml2js": "^0.4.14",
     "@vscode/test-cli": "^0.0.8",
     "@vscode/test-electron": "^2.3.9",
+    "@vscode/vsce": "^2.26.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",

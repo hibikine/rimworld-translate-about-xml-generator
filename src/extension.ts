@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { getModFolders, loadModFolders } from './lib/loadModFolders';
+import { loadModFolders } from './lib/loadModFolders';
 import { generateAboutXmlTemplate } from './lib/generateAboutXmlTemplate';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -13,10 +13,10 @@ export function activate(context: vscode.ExtensionContext) {
     loadModFolders();
   });
 
-  const disposable = vscode.commands.registerCommand(
+  const generateAboutXmlDisposable = vscode.commands.registerCommand(
     'rimworld-translate-about-xml-generator.generateAboutXml',
     async () => {
-      const mods = await getModFolders();
+      const mods = await loadModFolders();
       const { mod } = (await vscode.window.showQuickPick(
         mods.map((mod) => ({
           label: mod.name,
@@ -44,7 +44,13 @@ export function activate(context: vscode.ExtensionContext) {
     },
   );
 
-  context.subscriptions.push(disposable);
+  const reloadModFoldersDisposable = vscode.commands.registerCommand(
+    'rimworld-translate-about-xml-generator.reloadModFolders',
+    loadModFolders,
+  );
+
+  context.subscriptions.push(generateAboutXmlDisposable);
+  context.subscriptions.push(reloadModFoldersDisposable);
 }
 
 export function deactivate() {}
